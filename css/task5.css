@@ -1,0 +1,28 @@
+div {
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 16px;
+}
+button{
+   display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 10px; 
+border: none;
+border-radius: 8px;
+padding: 8px 16px;
+width: 148px;
+height: 40px;
+background: #4e75ff;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+}
+button:hover{
+    background: #6c8cff;
+}
