@@ -7,6 +7,7 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const input = document.querySelector("#controls input[type='number']");
 const boxes = document.querySelector("#boxes");
+const divItems = [];
 btnCreate.addEventListener("click", handleCreate);
 function handleCreate() {
   if (input.value > 100 || input.value < 1) {
@@ -18,8 +19,9 @@ function handleCreate() {
     div.style.width = `${30 + i * 10}px`;
     div.style.height = `${30 + i * 10}px`;
     div.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(div);
+    divItems.push(div);
   }
+  boxes.append(...divItems);
   input.value = "";
 }
 btnDestroy.addEventListener("click", handleDestroy);
