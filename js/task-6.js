@@ -7,12 +7,13 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const input = document.querySelector("#controls input[type='number']");
 const boxes = document.querySelector("#boxes");
-const divItems = [];
+
 btnCreate.addEventListener("click", handleCreate);
 function handleCreate() {
   if (input.value > 100 || input.value < 1) {
     return;
   }
+  const divItems = [];
   boxes.innerHTML = "";
   for (let i = 0; i < input.value; i += 1) {
     const div = document.createElement("div");
